@@ -1,6 +1,9 @@
 <template>
   <div class="hello">
+    <h2>Essential Links</h2>
+    <br>
     <h1>{{ msg }}</h1>
+    <br>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>

@@ -9,6 +9,8 @@ import About from './components/About'
 import Add from './components/Add'
 import CustomerDetails from './components/CustomerDetails'
 import Edit from './components/Edit'
+import Hello from './components/Hello'
+import BMap from './components/BMap'
 
 Vue.config.productionTip = false
 
@@ -25,6 +27,8 @@ const router = new VueRouter({
 		{path:"/add",component:Add},
 		{path:"/customer/:id",component:CustomerDetails},
 		{path:"/edit/:id",component:Edit},
+		{path:"/hello",component:Hello},
+		{path:"/map",component:BMap},
 	]
 })
 
@@ -46,8 +50,9 @@ new Vue({
 	        </div>
 	        <div id="navbar" class="collapse navbar-collapse">
 	          <ul class="nav navbar-nav">
-	            <li><router-link to="/">主页</router-link></li>
-	            <li><router-link to="/about">关于我们</router-link></li>
+				<li><router-link to="/">主页</router-link></li>
+				<li><router-link to="/map">定位</router-link></li>
+	            <li><router-link to="/hello">关于我们</router-link></li>
 	          </ul>
 
 	          <ul class="nav navbar-nav navbar-right">
