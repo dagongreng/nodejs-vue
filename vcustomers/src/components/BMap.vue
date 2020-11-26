@@ -75,7 +75,7 @@
                 var opts = {
                     width : 100,     // 信息窗口宽度
                     height: 60,     // 信息窗口高度
-                    title : "波浪艇" , // 信息窗口标题
+                    title : "定位点" , // 信息窗口标题
                     message:"坐标"
                 }
                 var infoWindow = new BMap.InfoWindow("位置", opts);  // 创建信息窗口对象 
