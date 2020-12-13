@@ -1,6 +1,7 @@
 <template>
   <div class="BMap container">
-    <h1 class="page-header">当前位置</h1>
+    <h5 class="page-header">当前位置<button class="pull-right" @click="addPiont">显示坐标</button></h5>
+    
     <div id="allmap" v-bind:style="mapStyle"></div>
     <br>
   </div>
@@ -40,25 +41,9 @@
                 default:'天安门'
             }
         },
-        // ready:function(){
-        //     var map =new BMap.Map("allmap");
-        //     var point =new BMap.Point(this.longitude,this.latitude);
-        //     var marker =new BMap.Marker(point);
-        //     map.addOverlay(marker);
-        //     map.centerAndZoom(point,15);
-        //     // 信息窗的配置信息
-        //     var opts ={
-        //         width :250,
-        //         height:75,
-        //         title :"地址：",
-        //     }
-        //     var infoWindow =newBMap.InfoWindow(this.description,opts);// 创建信息窗口对象
-        //     marker.addEventListener("click",function(){
-        //         map.openInfoWindow(infoWindow,point);
-        //     });
-        //     map.enableScrollWheelZoom(true);
-        //     map.openInfoWindow(infoWindow,point);//开启信息窗口
-        // },
+        addPoint:function(){
+             console.log("OK")
+        },
         mounted(){
             var map = new BMap.Map("allmap");
             var geolocation = new BMap.Geolocation();
@@ -75,7 +60,7 @@
                 var opts = {
                     width : 100,     // 信息窗口宽度
                     height: 60,     // 信息窗口高度
-                    title : "定位点" , // 信息窗口标题
+                    title : "波浪艇" , // 信息窗口标题
                     message:"坐标"
                 }
                 var infoWindow = new BMap.InfoWindow("位置", opts);  // 创建信息窗口对象 

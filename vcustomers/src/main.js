@@ -11,9 +11,14 @@ import CustomerDetails from './components/CustomerDetails'
 import Edit from './components/Edit'
 import Hello from './components/Hello'
 import BMap from './components/BMap'
+import itcastvideo from './components/itcastvideo'
+// import VideoPlayer from 'vue-video-player'
+// import 'vue-video-player/src/custom-theme.css'
+// import 'video.js/dist/video-js.css'
 
 Vue.config.productionTip = false
 
+// Vue.use(VideoPlayer)
 Vue.use(VueRouter)
 Vue.use(VueResource)
 
@@ -29,6 +34,7 @@ const router = new VueRouter({
 		{path:"/edit/:id",component:Edit},
 		{path:"/hello",component:Hello},
 		{path:"/map",component:BMap},
+		// {path:"/itcastvideo",component:itcastvideo},
 	]
 })
 
@@ -52,7 +58,7 @@ new Vue({
 	          <ul class="nav navbar-nav">
 				<li><router-link to="/">主页</router-link></li>
 				<li><router-link to="/map">定位</router-link></li>
-	            <li><router-link to="/hello">关于我们</router-link></li>
+	            <li><router-link to="/about">关于我们</router-link></li>
 	          </ul>
 
 	          <ul class="nav navbar-nav navbar-right">
